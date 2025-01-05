@@ -11,6 +11,7 @@ export default function Header() {
     totalCount: 10,
   };
 
+  console.log(classes);
   return (
     <header className={classes.header}>
       <div className={classes.container}>

@@ -1,0 +1,24 @@
+.header {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 10px 20px;        /* Padding inside the header */
+    display: flex;             /* Flexbox layout */
+    align-items: center;       /* Center items vertically */
+    justify-content: space-between; /* Space out children horizontally */
+    border-bottom: 1px solid #ddd; /* Optional border for header */
+  }
+  
+.container {
+    max-width: 1200px;         /* Limit the container width */
+    margin: 0 auto;            /* Center the container */
+    width: 100%;               /* Full width */
+    display: flex;             /* Flexbox layout */
+    justify-content: space-between; /* Space out items */
+  }
+  
+.logo {
+    font-size: 1.5rem;         /* Logo font size */
+    font-weight: bold;         /* Bold text */
+    text-decoration: none;     /* Remove underline for links */
+    color: #333;               /* Text color */
+  }
+  

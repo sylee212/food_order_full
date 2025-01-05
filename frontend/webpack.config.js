@@ -60,10 +60,25 @@ module.exports = {
         rules:
         [
             {
-            // this means that any file that ends with .scss will use the scss loader
-            test: /\.css$/,
-            use: ["style-loader", "css-loader" , "postcss-loader"]
-            },
+                test: /\.module\.css$/,
+                use: [
+                  "style-loader",
+                  {
+                    loader: "css-loader",
+                    options: {
+                      modules: true, // Enable CSS Modules
+                      sourceMap: true,
+                    },
+                  },
+                  "postcss-loader", // Add this only if you are using PostCSS
+                ],
+              },
+              // Global CSS Rule
+              {
+                test: /\.css$/,
+                exclude: /\.module\.css$/,
+                use: ["style-loader", "css-loader", "postcss-loader"],
+              },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
