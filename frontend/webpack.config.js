@@ -41,6 +41,13 @@ module.exports = {
         historyApiFallback: true
     },
 
+    resolve: {
+        fallback: {
+          crypto: false,
+          path: false,
+        },
+    },
+      
 
 
 
